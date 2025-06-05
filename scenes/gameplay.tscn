@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0etb7tqiyqhh"]
+
+[ext_resource type="PackedScene" uid="uid://cjkrwh14l6sw4" path="res://scenes/main_character.tscn" id="1_n4psk"]
+
+[node name="gameplay" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 312.0
+offset_top = 56.0
+offset_right = 764.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 37
+text = "THIS IS A TEST GAMEPLAY"
+
+[node name="mainCharacter" parent="." instance=ExtResource("1_n4psk")]
+position = Vector2(-56, 32)
