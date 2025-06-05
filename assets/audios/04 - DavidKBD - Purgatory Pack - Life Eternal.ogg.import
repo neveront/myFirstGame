@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://pipmfqati232"
+path="res://.godot/imported/04 - DavidKBD - Purgatory Pack - Life Eternal.ogg-61bbfd894fded77dd138323852a5a29d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audios/04 - DavidKBD - Purgatory Pack - Life Eternal.ogg"
+dest_files=["res://.godot/imported/04 - DavidKBD - Purgatory Pack - Life Eternal.ogg-61bbfd894fded77dd138323852a5a29d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

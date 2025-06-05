@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://bkdkfeuo767r0"]
+
+[ext_resource type="Script" uid="uid://bi36wtsodwp8s" path="res://menu.gd" id="1_ecwwl"]
+[ext_resource type="Texture2D" uid="uid://chugnv86yt3d1" path="res://assets/ui/Panel/Window/Medium.png" id="2_kk3ma"]
+[ext_resource type="Texture2D" uid="uid://mw522x6d1xov" path="res://assets/ui/Buttons/Square-Medium/Play/Default.png" id="3_nrnbx"]
+[ext_resource type="Texture2D" uid="uid://bdmtc3qs0dmqq" path="res://assets/ui/Buttons/Square-Medium/Play/Hover.png" id="4_iqepy"]
+[ext_resource type="Texture2D" uid="uid://b5tkpdg4i8mdn" path="res://assets/ui/Buttons/Square-Medium/SoundOn/Default.png" id="5_h1wq0"]
+[ext_resource type="Texture2D" uid="uid://dtxqtqtf2jotv" path="res://assets/ui/Buttons/Square-Medium/SoundOn/Hover.png" id="6_dwrpx"]
+[ext_resource type="AudioStream" uid="uid://pipmfqati232" path="res://assets/audios/04 - DavidKBD - Purgatory Pack - Life Eternal.ogg" id="7_g7jxm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font_size = 55
+font_color = Color(1, 1, 1, 0.6)
+
+[node name="menu" type="CanvasGroup"]
+script = ExtResource("1_ecwwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-17, -9)
+texture = ExtResource("2_kk3ma")
+
+[node name="playButton" type="TextureButton" parent="."]
+offset_left = -177.0
+offset_top = -17.0
+offset_right = -89.0
+offset_bottom = 71.0
+texture_normal = ExtResource("3_nrnbx")
+texture_hover = ExtResource("4_iqepy")
+
+[node name="muteButton" type="TextureButton" parent="."]
+offset_left = 39.0
+offset_top = -17.0
+offset_right = 127.0
+offset_bottom = 71.0
+texture_normal = ExtResource("5_h1wq0")
+texture_hover = ExtResource("6_dwrpx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -97.0
+offset_top = -129.0
+offset_right = 47.0
+offset_bottom = -53.0
+text = "GREY"
+label_settings = SubResource("LabelSettings_lquwl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_g7jxm")
+volume_db = -19.855
+autoplay = true
+
+[connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
