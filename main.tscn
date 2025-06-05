@@ -1,16 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://of5oqha5o3ma"]
+[gd_scene load_steps=6 format=3 uid="uid://of5oqha5o3ma"]
 
 [ext_resource type="PackedScene" uid="uid://bkdkfeuo767r0" path="res://menu.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://c406doytvtljb" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://bktmu7y27lq16" path="res://gameplay.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://o284ly8l3whp" path="res://menu_screen.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://b0etb7tqiyqhh" path="res://gameplay.tscn" id="8_5vw27"]
 
-[sub_resource type="GDScript" id="GDScript_0xm2m"]
-script/source = "extends Node2D
-"
-
 [node name="Main" type="Node2D"]
-
-[node name="menu" parent="." instance=ExtResource("1_0xm2m")]
-position = Vector2(593, 337)
+script = ExtResource("1_h2yge")
 
 [node name="gameplay" parent="." instance=ExtResource("8_5vw27")]
-script = SubResource("GDScript_0xm2m")
+visible = false
+position = Vector2(576, 168)
+script = ExtResource("4_1bvp3")
+
+[node name="menu" parent="." instance=ExtResource("1_0xm2m")]
+visible = false
+position = Vector2(593, 337)
+
+[node name="menu_screen" parent="." instance=ExtResource("5_lquwl")]
