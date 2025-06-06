@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0etb7tqiyqhh"]
+[gd_scene load_steps=3 format=3 uid="uid://b0etb7tqiyqhh"]
 
 [ext_resource type="PackedScene" uid="uid://cjkrwh14l6sw4" path="res://scenes/main_character.tscn" id="1_n4psk"]
+[ext_resource type="AudioStream" uid="uid://cbky6tx6l87i3" path="res://assets/audios/01 - DavidKBD - Purgatory Pack - Purgatory.ogg" id="2_00tan"]
 
 [node name="gameplay" type="Node2D"]
 
@@ -14,3 +15,8 @@ text = "THIS IS A TEST GAMEPLAY"
 
 [node name="mainCharacter" parent="." instance=ExtResource("1_n4psk")]
 position = Vector2(-56, 32)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_00tan")
+volume_db = -20.0
+autoplay = true

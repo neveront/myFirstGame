@@ -1,25 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://of5oqha5o3ma"]
+[gd_scene load_steps=3 format=3 uid="uid://of5oqha5o3ma"]
 
 [ext_resource type="Script" uid="uid://c406doytvtljb" path="res://scripts/main.gd" id="1_tefeu"]
-[ext_resource type="PackedScene" uid="uid://b0etb7tqiyqhh" path="res://scenes/gameplay.tscn" id="2_o6xl0"]
-[ext_resource type="Script" uid="uid://bktmu7y27lq16" path="res://scripts/gameplay.gd" id="3_tipki"]
-[ext_resource type="PackedScene" uid="uid://bkdkfeuo767r0" path="res://scenes/menu.tscn" id="4_85g3d"]
 [ext_resource type="PackedScene" uid="uid://o284ly8l3whp" path="res://scenes/menu_screen.tscn" id="5_choun"]
-[ext_resource type="PackedScene" uid="uid://cjkrwh14l6sw4" path="res://scenes/main_character.tscn" id="6_ya4ey"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_tefeu")
 
-[node name="gameplay" parent="." instance=ExtResource("2_o6xl0")]
-visible = false
-position = Vector2(576, 168)
-script = ExtResource("3_tipki")
-
-[node name="menu" parent="." instance=ExtResource("4_85g3d")]
-visible = false
-position = Vector2(593, 337)
-
 [node name="menu_screen" parent="." instance=ExtResource("5_choun")]
-
-[node name="mainCharacter" parent="." instance=ExtResource("6_ya4ey")]
-visible = false
