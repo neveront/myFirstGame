@@ -4,6 +4,8 @@ const SPEED = 300.0
 @onready var animated_sprite: AnimatedSprite2D = $movements
 @onready var smoke_effect: AnimatedSprite2D = $attackEffect
 @onready var crosshair_line: Line2D = $crosshairLine
+@onready var bullet_animation: AnimatedSprite2D = get_node("/Gun/projectile/bulletEffect")
+
 
 var last_direction: String = "down"
 
@@ -88,7 +90,14 @@ func attack() -> void:
 	$Gun/blackEffect.frame = 0
 	$Gun/whiteEffect.stop()
 	$Gun/whiteEffect.frame = 0
+	var instance = projectile.instantiate()
+	instance.dir = rotation
+	instance.spawnPos = global_position	
+	instance.spawnRot = rotation
+	get_parent().add_child(instance)  # Adds to the same parent as the shooter
 	
 
 func _on_smoke_effect_animation_finished() -> void:
 	smoke_effect.hide()
+
+@onready var projectile = load("res://scenes/projectile.tscn")

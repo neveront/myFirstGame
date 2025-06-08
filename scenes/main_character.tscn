@@ -1,4 +1,4 @@
-[gd_scene load_steps=157 format=3 uid="uid://cjkrwh14l6sw4"]
+[gd_scene load_steps=158 format=3 uid="uid://cjkrwh14l6sw4"]
 
 [ext_resource type="Script" uid="uid://cuu508qvx88p8" path="res://scripts/main_character.gd" id="1_ig48j"]
 [ext_resource type="Texture2D" uid="uid://g67ku27ngn3a" path="res://assets/The Male adventurer/Idle/idle_left_down.png" id="2_d3a2h"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://ule61n8emwaa" path="res://assets/The Male adventurer/Walk/walk_right_up.png" id="7_d3a2h"]
 [ext_resource type="Texture2D" uid="uid://btfnrmj5msjh8" path="res://assets/The Male adventurer/Idle/idle_right_up.png" id="7_o67j2"]
 [ext_resource type="PackedScene" uid="uid://dq1yt46qaokcs" path="res://scenes/gun.tscn" id="15_8rh4e"]
+[ext_resource type="PackedScene" uid="uid://c420tp2m772mh" path="res://scenes/projectile.tscn" id="16_is85u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l10xd"]
 atlas = ExtResource("2_pvtuh")
@@ -1103,3 +1104,6 @@ default_color = Color(0.760784, 0.113725, 0.113725, 1)
 gradient = SubResource("Gradient_pvtuh")
 
 [node name="Gun" parent="." instance=ExtResource("15_8rh4e")]
+
+[node name="projectile" parent="Gun" instance=ExtResource("16_is85u")]
+position = Vector2(-179.604, 356.044)

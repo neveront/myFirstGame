@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://c420tp2m772mh"]
+
+[ext_resource type="Texture2D" uid="uid://dqxptj46u5iec" path="res://assets/Bullet 24x24 Free  Part 1B.png" id="1_c8fcr"]
+[ext_resource type="Script" uid="uid://0yhps0nv8wte" path="res://scripts/projectile.gd" id="1_q3m7n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q3m7n"]
+radius = 64.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_softn"]
+atlas = ExtResource("1_c8fcr")
+region = Rect2(384, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q2a6"]
+atlas = ExtResource("1_c8fcr")
+region = Rect2(408, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byeak"]
+atlas = ExtResource("1_c8fcr")
+region = Rect2(432, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxwu6"]
+atlas = ExtResource("1_c8fcr")
+region = Rect2(456, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7nm8"]
+atlas = ExtResource("1_c8fcr")
+region = Rect2(480, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c2e5"]
+atlas = ExtResource("1_c8fcr")
+region = Rect2(504, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl1gp"]
+atlas = ExtResource("1_c8fcr")
+region = Rect2(528, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejmht"]
+atlas = ExtResource("1_c8fcr")
+region = Rect2(552, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_031o2"]
+animations = [{
+"frames": [{
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_softn")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_6q2a6")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_byeak")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_jxwu6")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_w7nm8")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_6c2e5")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_pl1gp")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_ejmht")
+}],
+"loop": true,
+"name": &"bullet",
+"speed": 5.0
+}]
+
+[node name="projectile" type="CharacterBody2D"]
+script = ExtResource("1_q3m7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q3m7n")
+
+[node name="bulletEffect" type="AnimatedSprite2D" parent="."]
+scale = Vector2(6.5, 6.5)
+sprite_frames = SubResource("SpriteFrames_031o2")
+animation = &"bullet"
+frame = 7
+frame_progress = 0.222414
