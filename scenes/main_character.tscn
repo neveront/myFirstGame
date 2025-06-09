@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://ule61n8emwaa" path="res://assets/The Male adventurer/Walk/walk_right_up.png" id="7_d3a2h"]
 [ext_resource type="Texture2D" uid="uid://btfnrmj5msjh8" path="res://assets/The Male adventurer/Idle/idle_right_up.png" id="7_o67j2"]
 [ext_resource type="PackedScene" uid="uid://dq1yt46qaokcs" path="res://scenes/gun.tscn" id="15_8rh4e"]
-[ext_resource type="PackedScene" uid="uid://c420tp2m772mh" path="res://scenes/projectile.tscn" id="16_is85u"]
+[ext_resource type="Script" uid="uid://xrrirhpbrjgs" path="res://scripts/gun.gd" id="16_is85u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l10xd"]
 atlas = ExtResource("2_pvtuh")
@@ -1067,14 +1067,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0d0nc"]
-size = Vector2(48, 20)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_is85u"]
+radius = 21.0
+height = 62.0
 
 [sub_resource type="Gradient" id="Gradient_pvtuh"]
 offsets = PackedFloat32Array(0, 0.52349, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.261745, 0.261745, 0.261745, 1, 1, 1, 1, 1)
 
 [node name="mainCharacter" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_ig48j")
 
 [node name="attackEffect" type="AnimatedSprite2D" parent="."]
@@ -1091,19 +1093,15 @@ sprite_frames = SubResource("SpriteFrames_f3njc")
 animation = &"walk_upright"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 32)
-shape = SubResource("RectangleShape2D_0d0nc")
+shape = SubResource("CapsuleShape2D_is85u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="crosshairLine" type="Line2D" parent="."]
-visible = false
 points = PackedVector2Array(3, 47)
 width = 4.0
 default_color = Color(0.760784, 0.113725, 0.113725, 1)
 gradient = SubResource("Gradient_pvtuh")
 
 [node name="Gun" parent="." instance=ExtResource("15_8rh4e")]
-
-[node name="projectile" parent="Gun" instance=ExtResource("16_is85u")]
-position = Vector2(-179.604, 356.044)
+script = ExtResource("16_is85u")

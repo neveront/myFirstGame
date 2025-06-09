@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED = 200
+@export var SPEED = 1000
 
 var dir : float
 var spawnPos : Vector2
@@ -12,7 +12,7 @@ func _ready():
 	global_rotation = spawnRot
 	if bullet_effect:
 		bullet_effect.play("bullet")
-	
+
 func _physics_process(delta: float):
-	velocity = Vector2(0,-SPEED).rotated(dir)
+	velocity = Vector2(SPEED, 0).rotated(dir)
 	move_and_slide()

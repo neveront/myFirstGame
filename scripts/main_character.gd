@@ -80,6 +80,7 @@ func get_direction_string(direction: Vector2) -> String:
 		else:
 			return "down"
 
+@onready var gun = $Gun  # Adjust path to your actual gun node
 func attack() -> void:
 	smoke_effect.frame = 0
 	smoke_effect.show()
@@ -90,11 +91,8 @@ func attack() -> void:
 	$Gun/blackEffect.frame = 0
 	$Gun/whiteEffect.stop()
 	$Gun/whiteEffect.frame = 0
-	var instance = projectile.instantiate()
-	instance.dir = rotation
-	instance.spawnPos = global_position	
-	instance.spawnRot = rotation
-	get_parent().add_child(instance)  # Adds to the same parent as the shooter
+	gun.shoot()
+
 	
 
 func _on_smoke_effect_animation_finished() -> void:
