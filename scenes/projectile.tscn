@@ -132,8 +132,8 @@ animations = [{
 }]
 
 [node name="projectile" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 0
+collision_layer = 15
+collision_mask = 15
 script = ExtResource("1_q3m7n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -143,3 +143,4 @@ shape = SubResource("CircleShape2D_q3m7n")
 scale = Vector2(1.0625, 1.0625)
 sprite_frames = SubResource("SpriteFrames_g1ida")
 animation = &"white_bullet"
+frame_progress = 0.948334

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0etb7tqiyqhh"]
+[gd_scene load_steps=4 format=3 uid="uid://b0etb7tqiyqhh"]
 
 [ext_resource type="PackedScene" uid="uid://cjkrwh14l6sw4" path="res://scenes/main_character.tscn" id="1_n4psk"]
 [ext_resource type="AudioStream" uid="uid://cbky6tx6l87i3" path="res://assets/audios/01 - DavidKBD - Purgatory Pack - Purgatory.ogg" id="2_00tan"]
+[ext_resource type="PackedScene" uid="uid://1ujsaof8jqm" path="res://mob.tscn" id="3_l1v76"]
 
 [node name="gameplay" type="Node2D"]
 
@@ -19,4 +20,8 @@ position = Vector2(-56, 32)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_00tan")
 volume_db = -20.0
-autoplay = true
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_l1v76")]
+position = Vector2(-32, -280)
+collision_layer = 15
+collision_mask = 15

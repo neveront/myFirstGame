@@ -20,11 +20,11 @@ func shoot(is_right_click: bool = false):
 	var animation_type: String
 
 	if is_right_click:
-		offset = forward_vector * -125
+		offset = forward_vector * -70
 		bullet_dir = direction + PI
 		animation_type = "black_bullet"  # ← Name of rear animation
 	else:
-		offset = forward_vector * 125
+		offset = forward_vector * 70
 		bullet_dir = direction
 		animation_type = "white_bullet"  # ← Name of front animation
 	print(animation_type)

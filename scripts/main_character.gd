@@ -4,7 +4,7 @@ const SPEED = 300.0
 @onready var animated_sprite: AnimatedSprite2D = $movements
 @onready var smoke_effect: AnimatedSprite2D = $attackEffect
 @onready var crosshair_line: Line2D = $crosshairLine
-@onready var bullet_animation: AnimatedSprite2D = get_node("/projectile/bulletEffect")
+#@onready var bullet_animation: AnimatedSprite2D = get_node("/projectile/bulletEffect")
 
 
 var last_direction: String = "down"
