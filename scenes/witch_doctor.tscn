@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cq46knme1kyqv"]
+[gd_scene format=3 uid="uid://bdjqk6n2qsbfv"]
 
 [ext_resource type="Texture2D" uid="uid://wp24cgtxplyo" path="res://assets/mobs/Skeleton/Skeleton_Idle.png" id="1_txkty"]
 [ext_resource type="Texture2D" uid="uid://bqg7bxu3tfjsj" path="res://assets/mobs/Skeleton/Skeleton_Move.png" id="2_ivqcw"]

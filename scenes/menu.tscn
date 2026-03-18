@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkdkfeuo767r0"]
+[gd_scene format=3 uid="uid://bkdkfeuo767r0"]
 
 [ext_resource type="Script" uid="uid://bi36wtsodwp8s" path="res://scripts/menu.gd" id="1_ecwwl"]
 [ext_resource type="Texture2D" uid="uid://chugnv86yt3d1" path="res://assets/ui/Panel/Window/Medium.png" id="2_kk3ma"]
@@ -12,14 +12,14 @@
 font_size = 55
 font_color = Color(1, 1, 1, 0.6)
 
-[node name="menu" type="CanvasGroup"]
+[node name="menu" type="CanvasGroup" unique_id=1674155192]
 script = ExtResource("1_ecwwl")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=793852625]
 position = Vector2(-17, -9)
 texture = ExtResource("2_kk3ma")
 
-[node name="playButton" type="TextureButton" parent="."]
+[node name="playButton" type="TextureButton" parent="." unique_id=1501098379]
 offset_left = -177.0
 offset_top = -17.0
 offset_right = -89.0
@@ -27,7 +27,7 @@ offset_bottom = 71.0
 texture_normal = ExtResource("3_nrnbx")
 texture_hover = ExtResource("4_iqepy")
 
-[node name="muteButton" type="TextureButton" parent="."]
+[node name="muteButton" type="TextureButton" parent="." unique_id=1442760265]
 offset_left = 39.0
 offset_top = -17.0
 offset_right = 127.0
@@ -35,7 +35,7 @@ offset_bottom = 71.0
 texture_normal = ExtResource("5_h1wq0")
 texture_hover = ExtResource("6_dwrpx")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=802138488]
 offset_left = -97.0
 offset_top = -129.0
 offset_right = 47.0
@@ -43,7 +43,7 @@ offset_bottom = -53.0
 text = "GREY"
 label_settings = SubResource("LabelSettings_lquwl")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1277507121]
 stream = ExtResource("7_g7jxm")
 volume_db = -19.855
 

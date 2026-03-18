@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://of5oqha5o3ma"]
+[gd_scene format=3 uid="uid://of5oqha5o3ma"]
 
 [ext_resource type="Script" uid="uid://c406doytvtljb" path="res://scripts/main.gd" id="1_tefeu"]
 [ext_resource type="PackedScene" uid="uid://o284ly8l3whp" path="res://scenes/menu_screen.tscn" id="5_choun"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1616980252]
 script = ExtResource("1_tefeu")
 
-[node name="menu_screen" parent="." instance=ExtResource("5_choun")]
+[node name="menu_screen" parent="." unique_id=1116887127 instance=ExtResource("5_choun")]

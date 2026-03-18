@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c420tp2m772mh"]
+[gd_scene format=3 uid="uid://c420tp2m772mh"]
 
 [ext_resource type="Script" uid="uid://0yhps0nv8wte" path="res://scripts/projectile.gd" id="1_q3m7n"]
 [ext_resource type="Texture2D" uid="uid://c5ycn8ne2folh" path="res://assets/Bullet 24x24 Free  Part 1C.png" id="2_q3m7n"]
@@ -131,16 +131,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="projectile" type="CharacterBody2D"]
+[node name="projectile" type="CharacterBody2D" unique_id=390492014]
 collision_layer = 15
 collision_mask = 15
 script = ExtResource("1_q3m7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=979625347]
 shape = SubResource("CircleShape2D_q3m7n")
 
-[node name="bulletEffect" type="AnimatedSprite2D" parent="."]
+[node name="bulletEffect" type="AnimatedSprite2D" parent="." unique_id=1794299984]
 scale = Vector2(1.0625, 1.0625)
 sprite_frames = SubResource("SpriteFrames_g1ida")
 animation = &"white_bullet"
-frame_progress = 0.948334

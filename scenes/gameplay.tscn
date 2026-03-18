@@ -1,12 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0etb7tqiyqhh"]
+[gd_scene format=3 uid="uid://b0etb7tqiyqhh"]
 
 [ext_resource type="PackedScene" uid="uid://cjkrwh14l6sw4" path="res://scenes/main_character.tscn" id="1_n4psk"]
 [ext_resource type="AudioStream" uid="uid://cbky6tx6l87i3" path="res://assets/audios/01 - DavidKBD - Purgatory Pack - Purgatory.ogg" id="2_00tan"]
 [ext_resource type="PackedScene" uid="uid://1ujsaof8jqm" path="res://mob.tscn" id="3_l1v76"]
 
-[node name="gameplay" type="Node2D"]
+[node name="gameplay" type="Node2D" unique_id=1196474911]
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=480136649]
 offset_left = 312.0
 offset_top = 56.0
 offset_right = 764.0
@@ -14,14 +14,153 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 37
 text = "THIS IS A TEST GAMEPLAY"
 
-[node name="mainCharacter" parent="." instance=ExtResource("1_n4psk")]
+[node name="mainCharacter" parent="." unique_id=1999924178 instance=ExtResource("1_n4psk")]
 position = Vector2(-56, 32)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1278825686]
 stream = ExtResource("2_00tan")
 volume_db = -20.0
 
-[node name="StaticBody2D" parent="." instance=ExtResource("3_l1v76")]
-position = Vector2(-32, -280)
+[node name="StaticBody2D" parent="." unique_id=630684085 instance=ExtResource("3_l1v76")]
+position = Vector2(-298, -241)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D12" parent="." unique_id=116490013 instance=ExtResource("3_l1v76")]
+position = Vector2(386, -477)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D13" parent="." unique_id=954138336 instance=ExtResource("3_l1v76")]
+position = Vector2(126, -247)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D14" parent="." unique_id=903011407 instance=ExtResource("3_l1v76")]
+position = Vector2(-92, -160)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D15" parent="." unique_id=793085268 instance=ExtResource("3_l1v76")]
+position = Vector2(-75, -395)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D16" parent="." unique_id=1393634648 instance=ExtResource("3_l1v76")]
+position = Vector2(-491, -232)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D17" parent="." unique_id=137406491 instance=ExtResource("3_l1v76")]
+position = Vector2(-523, 85)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D18" parent="." unique_id=409100144 instance=ExtResource("3_l1v76")]
+position = Vector2(-69, 276)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D19" parent="." unique_id=872741380 instance=ExtResource("3_l1v76")]
+position = Vector2(-397, 70)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D20" parent="." unique_id=136062319 instance=ExtResource("3_l1v76")]
+position = Vector2(913, 263)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D21" parent="." unique_id=2097052729 instance=ExtResource("3_l1v76")]
+position = Vector2(-739, 223)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D22" parent="." unique_id=1802323190 instance=ExtResource("3_l1v76")]
+position = Vector2(187, -415)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D23" parent="." unique_id=1685108599 instance=ExtResource("3_l1v76")]
+position = Vector2(158, 485)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D24" parent="." unique_id=69917382 instance=ExtResource("3_l1v76")]
+position = Vector2(-742, 439)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D5" parent="." unique_id=611268610 instance=ExtResource("3_l1v76")]
+position = Vector2(285, 309)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D6" parent="." unique_id=189200294 instance=ExtResource("3_l1v76")]
+position = Vector2(-471, 256)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D7" parent="." unique_id=931471958 instance=ExtResource("3_l1v76")]
+position = Vector2(-570, -113)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D8" parent="." unique_id=710278378 instance=ExtResource("3_l1v76")]
+position = Vector2(167, 200)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D9" parent="." unique_id=1421899581 instance=ExtResource("3_l1v76")]
+position = Vector2(356, -214)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D10" parent="." unique_id=1172802682 instance=ExtResource("3_l1v76")]
+position = Vector2(-270, 239)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D11" parent="." unique_id=2052404649 instance=ExtResource("3_l1v76")]
+position = Vector2(-373, -394)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D4" parent="." unique_id=370461394 instance=ExtResource("3_l1v76")]
+position = Vector2(559, -94)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D2" parent="." unique_id=2010392030 instance=ExtResource("3_l1v76")]
+position = Vector2(-264, -59)
+scale = Vector2(2, 2)
+collision_layer = 15
+collision_mask = 15
+
+[node name="StaticBody2D3" parent="." unique_id=138505889 instance=ExtResource("3_l1v76")]
+position = Vector2(210, -100)
+scale = Vector2(2, 2)
 collision_layer = 15
 collision_mask = 15

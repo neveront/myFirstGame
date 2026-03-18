@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=3 uid="uid://cjkrwh14l6sw4"]
+[gd_scene format=3 uid="uid://cjkrwh14l6sw4"]
 
 [ext_resource type="Script" uid="uid://cuu508qvx88p8" path="res://scripts/main_character.gd" id="1_ig48j"]
 [ext_resource type="Texture2D" uid="uid://g67ku27ngn3a" path="res://assets/The Male adventurer/Idle/idle_left_down.png" id="2_d3a2h"]
@@ -1075,11 +1075,11 @@ height = 62.0
 offsets = PackedFloat32Array(0, 0.52349, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.261745, 0.261745, 0.261745, 1, 1, 1, 1, 1)
 
-[node name="mainCharacter" type="CharacterBody2D"]
+[node name="mainCharacter" type="CharacterBody2D" unique_id=721000151]
 collision_mask = 3
 script = ExtResource("1_ig48j")
 
-[node name="attackEffect" type="AnimatedSprite2D" parent="."]
+[node name="attackEffect" type="AnimatedSprite2D" parent="." unique_id=1411571747]
 position = Vector2(0, 44)
 scale = Vector2(2.5, 2.75)
 sprite_frames = SubResource("SpriteFrames_dh0ek")
@@ -1087,21 +1087,21 @@ animation = &"attackSmoke"
 frame = 6
 frame_progress = 0.271479
 
-[node name="movements" type="AnimatedSprite2D" parent="."]
-scale = Vector2(3.29167, 3.29167)
+[node name="movements" type="AnimatedSprite2D" parent="." unique_id=65827881]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_f3njc")
 animation = &"walk_upright"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1221701516]
 shape = SubResource("CapsuleShape2D_is85u")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1085825427]
 
-[node name="crosshairLine" type="Line2D" parent="."]
+[node name="crosshairLine" type="Line2D" parent="." unique_id=1985747561]
 points = PackedVector2Array(3, 47)
 width = 4.0
 default_color = Color(0.760784, 0.113725, 0.113725, 1)
 gradient = SubResource("Gradient_pvtuh")
 
-[node name="Gun" parent="." instance=ExtResource("15_8rh4e")]
+[node name="Gun" parent="." unique_id=438811787 instance=ExtResource("15_8rh4e")]
 script = ExtResource("16_is85u")

@@ -1,12 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://o284ly8l3whp"]
+[gd_scene format=3 uid="uid://o284ly8l3whp"]
 
 [ext_resource type="PackedScene" uid="uid://bkdkfeuo767r0" path="res://scenes/menu.tscn" id="1_tuusc"]
 
-[node name="menu_screen" type="Node2D"]
+[node name="menu_screen" type="Node2D" unique_id=587006946]
 
-[node name="menu" parent="." instance=ExtResource("1_tuusc")]
+[node name="menu" parent="." unique_id=199339464 instance=ExtResource("1_tuusc")]
 position = Vector2(584, 296)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=899452584]
 position = Vector2(576, 328)
 position_smoothing_enabled = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dq1yt46qaokcs"]
+[gd_scene format=3 uid="uid://dq1yt46qaokcs"]
 
 [ext_resource type="Texture2D" uid="uid://86d7a1kks52c" path="res://assets/wnb_attacks/black_attack.png" id="1_gp1hk"]
 [ext_resource type="Texture2D" uid="uid://ccoeq1aa37gkg" path="res://assets/bnw_attacks/gray_attack.png" id="2_qd4js"]
@@ -487,9 +487,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Gun" type="Node2D"]
+[node name="Gun" type="Node2D" unique_id=542753079]
 
-[node name="gunAttack" type="AnimatedSprite2D" parent="."]
+[node name="gunAttack" type="AnimatedSprite2D" parent="." unique_id=671909012]
 position = Vector2(9.53674e-07, 1.16415e-10)
 rotation = 4.71246
 scale = Vector2(0.277112, 0.374764)
@@ -497,7 +497,7 @@ sprite_frames = SubResource("SpriteFrames_niktg")
 animation = &"white_attack"
 script = SubResource("GDScript_gp1hk")
 
-[node name="blackEffect" type="AnimatedSprite2D" parent="."]
+[node name="blackEffect" type="AnimatedSprite2D" parent="." unique_id=682711025]
 position = Vector2(-136, 1.30385e-08)
 rotation = -1.5722
 scale = Vector2(1.96918, 1.96918)
@@ -506,7 +506,7 @@ animation = &"black_effect"
 frame = 10
 frame_progress = 1.0
 
-[node name="whiteEffect" type="AnimatedSprite2D" parent="."]
+[node name="whiteEffect" type="AnimatedSprite2D" parent="." unique_id=747948429]
 position = Vector2(112, 0)
 rotation = 2.08433
 scale = Vector2(2, 2)

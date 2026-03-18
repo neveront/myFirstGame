@@ -1,5 +1,6 @@
-[gd_scene load_steps=44 format=3 uid="uid://1ujsaof8jqm"]
+[gd_scene load_steps=45 format=3 uid="uid://1ujsaof8jqm"]
 
+[ext_resource type="Script" path="res://scripts/mob.gd" id="1_mob_gd"]
 [ext_resource type="Texture2D" uid="uid://wp24cgtxplyo" path="res://assets/mobs/Skeleton/Skeleton_Idle.png" id="1_nokgg"]
 [ext_resource type="Texture2D" uid="uid://bqg7bxu3tfjsj" path="res://assets/mobs/Skeleton/Skeleton_Move.png" id="2_ubaqv"]
 
@@ -327,6 +328,7 @@ animations = [{
 }]
 
 [node name="mob_skeleton" type="CharacterBody2D"]
+script = ExtResource("1_mob_gd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_71xlh")
