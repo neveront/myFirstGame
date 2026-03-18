@@ -1090,7 +1090,7 @@ frame_progress = 0.271479
 [node name="movements" type="AnimatedSprite2D" parent="." unique_id=65827881]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_f3njc")
-animation = &"walk_upright"
+animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1221701516]
 shape = SubResource("CapsuleShape2D_is85u")
